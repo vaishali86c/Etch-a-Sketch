@@ -4,49 +4,33 @@ const buttonSize2 = document.querySelector('#btn2');
 const buttonSize3 = document.querySelector('#btn3');
 const buttonSize4 = document.querySelector('#btn4');
 const clear = document.querySelector('#clear')
-// const container = document.querySelector('.container');
-// const currentGrid = createGrid1(16);
-    
-// const gridcell =document.querySelectorAll(".container #grid-sqare-16");
+const container = document.querySelector('.container');
+const gridsquare = container.querySelectorAll('.gridsqr')
+let currentGridSize = 0;
 
 
-
-
-// buttonSize1.onclick = () => createGrid1();
 
 buttonSize1.onclick = () => createGrid1(16);
 buttonSize2.onclick = () => createGrid1(32);
 buttonSize3.onclick = () => createGrid1(64);
 buttonSize4.onclick = () => createGrid1(128);
 clear.onclick = () => clearGrid();
-// const gridcell =document.querySelectorAll(".ontainer #grid-sqare-16");
-
-// function clearGrid() {
-//     container.innerHTML = '';
-//     currentGrid = null;
-//   }
-// if (size == 16) {
-//     createGrid1(16);
-// } else if (size == 32) {
-//     createGrid2(32);
-// } else if (size == 64) {
-//     createGrid3(64);
-// }else (size == 128) {
-//     createGrid4(128);
-// // }
-// function clearGrid() {
-//     container.innerHTML = '';
-//     // currentGrid = null;
-// }
 
 
-
+function clearGrid() {
+    container.innerHTML = '';  //It clears the HTML content of the container element using container.innerHTML = '', effectively removing all grid squares.
+    container.style.gridTemplateColumns = '';//  used to cleargrid function to reset the gridtemplatecol style propert of the container element to an empty string
+}
 function createGrid1(size) {
-    // clearGrid();
+
+    clearGrid();
+    currentGridSize = size;
+
     const container = document.querySelector('.container');
   
     for (let i = 0;i < size;i++) {
-        for (let j = 0;j < size;j++) {
+        for (let j = 0;j < size;j++) { 
+
             const gridsqr= document.createElement('div');
             if (size == 16) {
                 gridsqr.classList.add('grid-square16');
@@ -63,83 +47,13 @@ function createGrid1(size) {
             if (size == 128) {
                 gridsqr.classList.add('grid-square128');
                 container.appendChild(gridsqr);
-    
             }
-
-
         }
+        
     }
     container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
- 
-    
+                                                               
     /* grid-template-columns: repeat(16,1fr);    */
     /*repeat(16, 1fr) indicates that the pattern should repeat 16 times.
     1fr specifies that each column should occupy an equal fraction of the available space */
 }
-
-// createGrid1();
-
-// function createGrid2() {
-    
-//     const container = document.querySelector('.container');
-   
-//     for (let i = 0;i < 32;i++) {
-//         for (let j = 0;j < 32;j++) {
-//             const gridsqr = document.createElement('div');
-//             gridsqr.classList.add('grid-square32');
-//             container.appendChild(gridsqr);
-
-
-//         }
-//     }
-//     container.style.gridTemplateColumns = `repeat(32, 1fr)`;
-// }
-// //createGrid2(32);
-
-// function createGrid3() {
-    
-//     const container = document.querySelector('.container');
-   
-//     for (let i = 0;i < 64;i++) {
-//         for (let j = 0;j < 64;j++) {
-//             const gridsqr3 = document.createElement('div');
-//             gridsqr.classList.add('grid-square64');
-//             container.appendChild(gridsqr);
-
-
-//         }
-//     }
-//     container.style.gridTemplateColumns = `repeat(64, 1fr)`;
-// }
-
-// //createGrid3(64);
-
-// function createGrid4() {
-    
-//     const container = document.querySelector('.container');
-   
-//     for (let i = 0;i < 128;i++) {
-//         for (let j = 0;j < 128;j++) {
-//             const gridsqr4 = document.createElement('div');
-//             gridsqr.classList.add('grid-square128');
-//             container.appendChild(gridsqr);
-
-
-//         }
-//     }
-//     container.style.gridTemplateColumns = `repeat(128, 1fr)`;
-// }
-//createGrid4(128);
-
-
-
-
-
-
-
-
-
-
-//using javscript create divs
-
-//use flexbox

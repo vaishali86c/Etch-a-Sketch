@@ -55,25 +55,25 @@
 #btn1 {
     /* flex: 1; */
     margin-left: 5%;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: -10%;
+    padding-right: -10%;
    
 }
 #btn2 {
     /* flex: 1; */
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: -10%;
+    padding-right: -10%;
    
 }
 #btn3 {
     /* flex: 1; */
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: -10%;
+    padding-right: -10%;
    
 }
 #btn4 {
     /* flex: 1; */
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: -10%;
+    padding-right: -10%;
    
 }
