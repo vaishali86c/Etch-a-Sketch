@@ -15,9 +15,9 @@ const clear = document.querySelector('#clear')
 // buttonSize1.onclick = () => createGrid1();
 
 buttonSize1.onclick = () => createGrid1(16);
-buttonSize2.onclick = () => createGrid2();
-buttonSize3.onclick = () => createGrid3();
-buttonSize4.onclick = () => createGrid4();
+buttonSize2.onclick = () => createGrid1(32);
+buttonSize3.onclick = () => createGrid1(64);
+buttonSize4.onclick = () => createGrid1(128);
 clear.onclick = () => clearGrid();
 // const gridcell =document.querySelectorAll(".ontainer #grid-sqare-16");
 
@@ -47,9 +47,24 @@ function createGrid1(size) {
   
     for (let i = 0;i < size;i++) {
         for (let j = 0;j < size;j++) {
-            const gridsqr1= document.createElement('div');
-            gridsqr1.classList.add('grid-square16');
-            container.appendChild(gridsqr1);
+            const gridsqr= document.createElement('div');
+            if (size == 16) {
+                gridsqr.classList.add('grid-square16');
+                container.appendChild(gridsqr);
+            }
+            if (size == 32) {
+                gridsqr.classList.add('grid-square32');
+                container.appendChild(gridsqr);
+            }
+            if (size == 64) {
+                gridsqr.classList.add('grid-square64');
+                container.appendChild(gridsqr);
+            }
+            if (size == 128) {
+                gridsqr.classList.add('grid-square128');
+                container.appendChild(gridsqr);
+    
+            }
 
 
         }
@@ -64,56 +79,56 @@ function createGrid1(size) {
 
 // createGrid1();
 
-function createGrid2() {
+// function createGrid2() {
     
-    const container = document.querySelector('.container');
+//     const container = document.querySelector('.container');
    
-    for (let i = 0;i < 32;i++) {
-        for (let j = 0;j < 32;j++) {
-            const gridsqr2 = document.createElement('div');
-            gridsqr2.classList.add('grid-square32');
-            container.appendChild(gridsqr2);
+//     for (let i = 0;i < 32;i++) {
+//         for (let j = 0;j < 32;j++) {
+//             const gridsqr = document.createElement('div');
+//             gridsqr.classList.add('grid-square32');
+//             container.appendChild(gridsqr);
 
 
-        }
-    }
-    container.style.gridTemplateColumns = `repeat(32, 1fr)`;
-}
-//createGrid2(32);
+//         }
+//     }
+//     container.style.gridTemplateColumns = `repeat(32, 1fr)`;
+// }
+// //createGrid2(32);
 
-function createGrid3() {
+// function createGrid3() {
     
-    const container = document.querySelector('.container');
+//     const container = document.querySelector('.container');
    
-    for (let i = 0;i < 64;i++) {
-        for (let j = 0;j < 64;j++) {
-            const gridsqr3 = document.createElement('div');
-            gridsqr3.classList.add('grid-square64');
-            container.appendChild(gridsqr3);
+//     for (let i = 0;i < 64;i++) {
+//         for (let j = 0;j < 64;j++) {
+//             const gridsqr3 = document.createElement('div');
+//             gridsqr.classList.add('grid-square64');
+//             container.appendChild(gridsqr);
 
 
-        }
-    }
-    container.style.gridTemplateColumns = `repeat(64, 1fr)`;
-}
+//         }
+//     }
+//     container.style.gridTemplateColumns = `repeat(64, 1fr)`;
+// }
 
-//createGrid3(64);
+// //createGrid3(64);
 
-function createGrid4() {
+// function createGrid4() {
     
-    const container = document.querySelector('.container');
+//     const container = document.querySelector('.container');
    
-    for (let i = 0;i < 128;i++) {
-        for (let j = 0;j < 128;j++) {
-            const gridsqr4 = document.createElement('div');
-            gridsqr4.classList.add('grid-square128');
-            container.appendChild(gridsqr4);
+//     for (let i = 0;i < 128;i++) {
+//         for (let j = 0;j < 128;j++) {
+//             const gridsqr4 = document.createElement('div');
+//             gridsqr.classList.add('grid-square128');
+//             container.appendChild(gridsqr);
 
 
-        }
-    }
-    container.style.gridTemplateColumns = `repeat(128, 1fr)`;
-}
+//         }
+//     }
+//     container.style.gridTemplateColumns = `repeat(128, 1fr)`;
+// }
 //createGrid4(128);
 
 
