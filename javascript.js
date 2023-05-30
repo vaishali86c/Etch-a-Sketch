@@ -9,19 +9,17 @@ const gridsqr = container.querySelector('.gridsqr')
 let currentGridSize = 0;
 
 
-
 buttonSize1.onclick = () => createGrid1(16);
 buttonSize2.onclick = () => createGrid1(32);
 buttonSize3.onclick = () => createGrid1(64);
 buttonSize4.onclick = () => createGrid1(128);
 clear.onclick = () => clearGrid();
 
-
-
 function clearGrid() {
     container.innerHTML = '';  //It clears the HTML content of the container element using container.innerHTML = '', effectively removing all grid squares.
     container.style.gridTemplateColumns = '';//  used to cleargrid function to reset the gridtemplatecol style propert of the container element to an empty string
 }
+
 function createGrid1(size) {
 
     clearGrid();
@@ -88,10 +86,7 @@ function createGrid1(size) {
         }
         
     }
-    container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
-    
-    
-                                                             
+    container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;                                                        
     /* grid-template-columns: repeat(16,1fr);    */
     /*repeat(16, 1fr) indicates that the pattern should repeat 16 times.
     1fr specifies that each column should occupy an equal fraction of the available space */
