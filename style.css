@@ -18,31 +18,32 @@
     width: 45px;
     height: 33px;
     grid-row-gap: 1px;
-    background-color: rgb(255, 252, 252);
+    background-color: rgb(103, 105, 121);
 }
 .grid-square32 {
     width: 22px;
     height: 16px;
     grid-row-gap: 1px;
-    background-color: rgb(255, 252, 252);
+    background-color: rgb(103, 105, 121);
 }
 
 .grid-square64 {
     width: 10px;
     height: 7.6px;
     grid-row-gap: 1px;
-    background-color: rgb(255, 252, 252);
+    background-color: rgb(103, 105, 121);
 }
 
 .grid-square128 {
     width: 5px;
     height: 3.3px;
     grid-row-gap: 1px;
-    background-color: rgb(255, 252, 252);
+    background-color: rgb(103, 105, 121);
 }
 
 .head {
     text-align: center;
+    font-weight: bolder;
 }
  
 .btncontainer {
@@ -53,27 +54,60 @@
     
 }
 #btn1 {
-    /* flex: 1; */
-    margin-left: 5%;
-    padding-left: -10%;
-    padding-right: -10%;
+    font-size: larger;
+    font-style: oblique;
+    border-width: 0.4ch;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 10%;
+    margin-right: 5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: rgb(103, 105, 121);
+   
    
 }
 #btn2 {
-    /* flex: 1; */
-    padding-left: -10%;
-    padding-right: -10%;
-   
+    font-size: larger;
+    font-style: oblique;
+    border-width: 0.4ch;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-right: 5%;
+    padding-left: 1%;
+    padding-right: 1%;
+  
+ 
+    background-color: rgb(103, 105, 121);
 }
 #btn3 {
-    /* flex: 1; */
-    padding-left: -10%;
-    padding-right: -10%;
-   
+    font-size: larger;
+    border-width: 0.4ch;
+    font-style: oblique;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-right: 5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    
+    background-color: rgb(103, 105, 121);
 }
 #btn4 {
-    /* flex: 1; */
-    padding-left: -10%;
-    padding-right: -10%;
-   
+    font-size: larger;
+    font-style: oblique;
+    border-width: 0.4ch;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-right: 5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    
+    background-color: rgb(103, 105, 121);
 }
+#clear {
+    font-size: larger;
+    font-style: oblique;
+    border-width: 0.4ch;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(103, 105, 121);
+    margin-right: 10%;
+    padding-top: 0.8%;
+    padding-bottom: 0.8%;
+}
+ 
